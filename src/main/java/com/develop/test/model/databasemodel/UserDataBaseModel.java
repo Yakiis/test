@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.develop.test.model.responsemodel.User;
+
 @Entity
 @Table(name="user_profile")
 public class UserDataBaseModel {
@@ -24,6 +26,22 @@ public class UserDataBaseModel {
 	private String correo;
 	
 	private String sexo;
+	
+	
+
+	public UserDataBaseModel() {
+	
+	}
+
+	public UserDataBaseModel(User user,Long id) {
+		super();
+		this.id = id;
+		this.userName = user.getUserName();
+		this.password = user.getPassword();
+		this.rol      = user.getRol();
+		this.correo   = user.getCorreo();
+		this.sexo     = user.getSexo();
+	}
 
 	public Long getId() {
 		return id;
