@@ -9,14 +9,24 @@ public class UserModelRersponse implements Serializable{
 
 	private static final long serialVersionUID = 6374452559178664257L;
 	
-	List<UserDataBaseModel> userDb;
+	List<UserDataBaseModel> ListUserDb;
+	
+	UserDataBaseModel user;
 
 	public List<UserDataBaseModel> getUserDb() {
-		return userDb;
+		return ListUserDb;
 	}
 
-	public void setUserDb(List<UserDataBaseModel> userDb) {
-		this.userDb = userDb;
+	public void setUserDb(List<UserDataBaseModel> ListUserDb) {
+		this.ListUserDb = ListUserDb;
+	}
+
+	public UserDataBaseModel getUser() {
+		return user;
+	}
+
+	public void setUser(UserDataBaseModel user) {
+		this.user = user;
 	}
 
 	

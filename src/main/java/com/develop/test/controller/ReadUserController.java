@@ -20,6 +20,13 @@ public class ReadUserController implements IReadUserController{
 		
 		return new ResponseEntity<>(readUserService.readAllUser(),HttpStatus.OK);
 	}
+
+
+	@Override
+	public ResponseEntity<?> readbyid(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	

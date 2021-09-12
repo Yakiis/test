@@ -24,4 +24,10 @@ public class ReadUserService implements IReadUserService {
 		return user;
 	}
 
+	@Override
+	public UserModelRersponse readById(Long id) {
+		
+		return null;
+	}
+
 }
