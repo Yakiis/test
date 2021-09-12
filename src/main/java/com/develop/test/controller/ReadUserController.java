@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
 import com.develop.test.model.UserModelRersponse;
+
 import com.develop.test.service.IReadUserService;
 
 @Controller
@@ -21,11 +22,9 @@ public class ReadUserController implements IReadUserController{
 		return new ResponseEntity<>(readUserService.readAllUser(),HttpStatus.OK);
 	}
 
-
 	@Override
-	public ResponseEntity<?> readbyid(String id) {
-		// TODO Auto-generated method stub
-		return null;
+	public ResponseEntity<UserModelRersponse> readbyid(String id) {
+		return new ResponseEntity<>(readUserService.readById(Long.parseLong(id)),HttpStatus.OK);
 	}
 	
 	

@@ -13,13 +13,17 @@ public class UserDataBaseModel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private Long   id;
 	
 	private String userName;
 	
 	private String password;
 	
-	private String alias;
+	private String rol;
+	
+	private String correo;
+	
+	private String sexo;
 
 	public Long getId() {
 		return id;
@@ -45,12 +49,30 @@ public class UserDataBaseModel {
 		this.password = password;
 	}
 
-	public String getAlias() {
-		return alias;
+	public String getRol() {
+		return rol;
 	}
 
-	public void setAlias(String alias) {
-		this.alias = alias;
-	}	
+	public void setRol(String rol) {
+		this.rol = rol;
+	}
 
+	public String getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	
+	
 }

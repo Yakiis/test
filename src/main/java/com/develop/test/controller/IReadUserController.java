@@ -23,7 +23,11 @@ public interface IReadUserController {
 	@ResponseBody
 	public ResponseEntity<UserModelRersponse> readAllUser();
 	
-	@RequestMapping(value= "/read-by/{id}")
-	public ResponseEntity<?>readbyid(@PathVariable String id);
+	@ApiOperation(value    = "consulta los datos del usuario por id",
+		      notes    = "En este método los datos por un ID", 
+		      response = ResponseEntity.class, httpMethod = "GET")
+@GetMapping(  value    ="/by/id",produces = MediaType.APPLICATION_JSON_VALUE )
+	@RequestMapping(value= "/by/{id}")
+	public ResponseEntity<UserModelRersponse>readbyid(@PathVariable String id);
 
 }

@@ -26,8 +26,9 @@ public class ReadUserService implements IReadUserService {
 
 	@Override
 	public UserModelRersponse readById(Long id) {
-		
-		return null;
+		UserModelRersponse user = new UserModelRersponse();
+		user.setUser(userRepository.findById(id).get());
+		return user;
 	}
 
 }

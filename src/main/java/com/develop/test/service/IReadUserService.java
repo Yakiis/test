@@ -8,6 +8,7 @@ import com.develop.test.model.UserModelRersponse;
 public interface IReadUserService {
 	
 	UserModelRersponse readAllUser();
+	
 	UserModelRersponse readById(Long id);
 	
 

@@ -6,46 +6,65 @@ public class User implements Serializable{
 	
 	private static final long serialVersionUID = 1103877432466659099L;
 
-	private String nombre;
+	private String userName;
 	
-	private String apellido;
+	private String password;
 	
-	private String edad;
+	private String rol;
+	
+	private String correo;
+	
+	private String sexo;		
 
-	public User(String nombre, String apellido, String edad) {	
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.edad = edad;
+	public User(String userName, String password, String rol, String correo, String sexo) {
+		super();
+		this.userName = userName;
+		this.password = password;
+		this.rol = rol;
+		this.correo = correo;
+		this.sexo = sexo;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getRol() {
+		return rol;
+	}
+
+	public void setRol(String rol) {
+		this.rol = rol;
+	}
+
+	public String getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 	
-	public User() {
-		
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getApellido() {
-		return apellido;
-	}
-
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
-
-	public String getEdad() {
-		return edad;
-	}
-
-	public void setEdad(String edad) {
-		this.edad = edad;
-	}
-
 	
 	
 }
