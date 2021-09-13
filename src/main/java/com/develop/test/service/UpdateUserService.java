@@ -3,27 +3,26 @@ package com.develop.test.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.develop.test.model.databasemodel.UserDataBaseModel;
 import com.develop.test.model.responsemodel.UserModel;
 import com.develop.test.repository.IUserRepository;
 
 @Service
-public class CreateUserService implements ICreateUserService {
+public class UpdateUserService implements IUpdateUserService {
 
 	@Autowired
-	IUserRepository userRepository;
+	IUserRepository repository;
 	
 	@Override
-	public boolean createUser(UserModel user) {
+	public boolean update(UserModel user) {
 		boolean response;
-		Long id =userRepository.lastUser().getId()+1;
-		UserDataBaseModel userDb =new UserDataBaseModel(user, id);
-		if(userRepository.save(userDb) != null) {
+		if(repository.updateuser(user.getCorreo(), user.getPassword(), user.getRol(), user.getSexo(), user.getUserName(), user.getId())!=null) {
 			response = true;
-			
-		}else {
+		} else {
 			response = false;
 		}
 		return response;
 	}
+
+	
+	
 }

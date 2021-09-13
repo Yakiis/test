@@ -2,7 +2,6 @@ package com.develop.test.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,15 +11,16 @@ import com.develop.test.model.responsemodel.UserModel;
 
 import io.swagger.annotations.ApiOperation;
 
+
 @RestController
-@RequestMapping("/create")
-public interface ICreateUserController {
+@RequestMapping("/update")
+public interface IUpdateUserController {
 
-	@ApiOperation(value = "Agrega un nuevo usuario a la base de datos",
-			      notes = "nuevo usuario",
-			      response = ResponseEntity.class, 
-			      httpMethod = "POST")
-	@PostMapping(value = "/add", produces = MediaType.APPLICATION_JSON_VALUE)
-	ResponseEntity<String> createUSer(@RequestBody UserModel user);
-
+	@ApiOperation(value = "Actualiza un usuario en la base de datos",
+		      notes = "Actualiza usuario",
+		      response = ResponseEntity.class, 
+		      httpMethod = "POST")
+	@PostMapping(value = "/update-user", produces = MediaType.APPLICATION_JSON_VALUE)
+	ResponseEntity<String> updateuser(@RequestBody UserModel user);
+	
 }

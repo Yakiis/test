@@ -2,7 +2,7 @@ package com.develop.test.model.responsemodel;
 
 import java.io.Serializable;
 
-public class User implements Serializable{
+public class UserModel implements Serializable{
 	
 	private static final long serialVersionUID = 1103877432466659099L;
 
@@ -15,8 +15,10 @@ public class User implements Serializable{
 	private String correo;
 	
 	private String sexo;		
+	
+	private Long id;
 
-	public User(String userName, String password, String rol, String correo, String sexo) {
+	public UserModel(String userName, String password, String rol, String correo, String sexo) {
 		super();
 		this.userName = userName;
 		this.password = password;
@@ -63,6 +65,14 @@ public class User implements Serializable{
 
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	

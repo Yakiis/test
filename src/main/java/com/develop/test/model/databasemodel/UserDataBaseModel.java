@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.develop.test.model.responsemodel.User;
+import com.develop.test.model.responsemodel.UserModel;
 
 @Entity
 @Table(name="user_profile")
@@ -33,7 +33,7 @@ public class UserDataBaseModel {
 	
 	}
 
-	public UserDataBaseModel(User user,Long id) {
+	public UserDataBaseModel(UserModel user,Long id) {
 		super();
 		this.id = id;
 		this.userName = user.getUserName();

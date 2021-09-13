@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
-import com.develop.test.model.responsemodel.User;
+import com.develop.test.model.responsemodel.UserModel;
 import com.develop.test.service.CreateUserService;
 
 @Controller
@@ -15,7 +15,7 @@ public class CreateUserController implements ICreateUserController{
 	CreateUserService createUserService;
 
 	@Override
-	public ResponseEntity<String> createUSer(User user) {
+	public ResponseEntity<String> createUSer(UserModel user) {
 		if(createUserService.createUser(user)) {
 			return new ResponseEntity<>("se creo exitosamente el usuario",HttpStatus.OK);
 		}else {
