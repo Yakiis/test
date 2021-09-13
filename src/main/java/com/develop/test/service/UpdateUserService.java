@@ -15,7 +15,7 @@ public class UpdateUserService implements IUpdateUserService {
 	@Override
 	public boolean update(UserModel user) {
 		boolean response;
-		if(repository.updateuser(user.getCorreo(), user.getPassword(), user.getRol(), user.getSexo(), user.getUserName(), user.getId())!=null) {
+		if(repository.updateuser(user.getCorreo(), user.getPassword(), user.getRol(), user.getSexo(), user.getUserName(), user.getId())==1) {
 			response = true;
 		} else {
 			response = false;
