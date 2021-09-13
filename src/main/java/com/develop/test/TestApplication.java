@@ -30,6 +30,7 @@ public class TestApplication implements CommandLineRunner{
 		
 		user1.setId(1L);
 		user1.setUserName("yovany");
+		user1.setName("eduardo");
 		user1.setPassword("1234qaz.");
 		user1.setRol("admin");
 		user1.setSexo("M");
@@ -39,6 +40,7 @@ public class TestApplication implements CommandLineRunner{
 		new UserDataBaseModel();
 		user1.setId((user.lastUser().getId()+1));
 		user1.setUserName("jesus");
+		user1.setName("enrique");
 		user1.setPassword("1234qaz.");
 		user1.setRol("user");
 		user1.setSexo("M");

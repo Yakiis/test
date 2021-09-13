@@ -8,6 +8,8 @@ public class UserModel implements Serializable{
 
 	private String userName;
 	
+	private String name;
+	
 	private String password;
 	
 	private String rol;
@@ -18,13 +20,13 @@ public class UserModel implements Serializable{
 	
 	private String id;
 
-	public UserModel(String userName, String password, String rol, String correo, String sexo) {
-		super();
+	public UserModel(String userName, String name, String password, String rol, String correo, String sexo) {
 		this.userName = userName;
+		this.name     = name;
 		this.password = password;
-		this.rol = rol;
-		this.correo = correo;
-		this.sexo = sexo;
+		this.rol      = rol;
+		this.correo   = correo;
+		this.sexo     = sexo;
 	}
 
 	public String getUserName() {
@@ -73,6 +75,14 @@ public class UserModel implements Serializable{
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	

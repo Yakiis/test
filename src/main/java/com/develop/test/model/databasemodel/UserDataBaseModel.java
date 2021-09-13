@@ -19,6 +19,8 @@ public class UserDataBaseModel {
 	
 	private String userName;
 	
+	private String name;
+	
 	private String password;
 	
 	private String rol;
@@ -37,6 +39,7 @@ public class UserDataBaseModel {
 		super();
 		this.id = id;
 		this.userName = user.getUserName();
+		this.name     = user.getName();
 		this.password = user.getPassword();
 		this.rol      = user.getRol();
 		this.correo   = user.getCorreo();
@@ -91,6 +94,12 @@ public class UserDataBaseModel {
 		this.sexo = sexo;
 	}
 
-	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 }
