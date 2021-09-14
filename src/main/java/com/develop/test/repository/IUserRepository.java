@@ -19,10 +19,15 @@ public interface IUserRepository extends CrudRepository<UserDataBaseModel, Long>
 	@Modifying
 	@Transactional
 	@Query(value = "UPDATE user_profile SET correo=:correo , password=:pass, rol=:rol, sexo=:sexo, user_name=:userName WHERE id=:id",nativeQuery = true)
-	public int updateuser(@Param("correo") String correo,
+	public int updateUser(@Param("correo") String correo,
 		 	                            @Param("pass") String pass, 
 			                            @Param("rol") String rol,
 										@Param("sexo") String sexo,
 										@Param("userName") String userName,
 										@Param("id") String id);
+	
+	@Modifying
+	@Transactional
+	@Query(value = "DELETE from user_profile where id=:id",nativeQuery = true)
+	public int deleteUserById(@Param("id") String id);
 }

@@ -13,6 +13,7 @@ public class UpdateUserController implements IUpdateUserController {
 	
 	@Autowired
 	IUpdateUserService updateservice;
+	
 	@Override
 	public ResponseEntity<String>  updateuser(UserModel user) {
 		 
