@@ -12,7 +12,7 @@ import com.develop.test.model.responsemodel.UserModel;
 
 import io.swagger.annotations.ApiOperation;
 
-@CrossOrigin(value="*/*")
+@CrossOrigin(value="http://localhost:4200/")
 @RestController
 @RequestMapping("/create")
 public interface ICreateUserController {

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.ApiOperation;
 
-@CrossOrigin(value="*/*")
+@CrossOrigin(value="http://localhost:4200/")
 @RestController
 @RequestMapping("/delete")
 public interface IDeleteUserController {
